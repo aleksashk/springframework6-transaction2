@@ -7,13 +7,12 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@Transactional(propagation = Propagation.REQUIRED)
 public class ProductRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Transactional(propagation = Propagation.MANDATORY)
+    @Transactional(propagation = Propagation.SUPPORTS)
     public void addProduct(String name) {
         String sql = "insert into product values(null, ?)";
         jdbcTemplate.update(sql, name);
