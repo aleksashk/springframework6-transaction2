@@ -21,7 +21,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public void addTenProducts() {
         for (int i = 0; i < 10; i++) {
             productRepository.addProduct("Product " + i);
