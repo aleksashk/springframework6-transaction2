@@ -13,7 +13,7 @@ public class ProductRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional(propagation = Propagation.MANDATORY)
     public void addProduct(String name) {
         String sql = "insert into product values(null, ?)";
         jdbcTemplate.update(sql, name);
