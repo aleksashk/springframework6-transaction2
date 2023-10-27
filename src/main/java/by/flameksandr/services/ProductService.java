@@ -16,8 +16,6 @@ public class ProductService {
      * NEVER
      * NOT_SUPPORTED
      * NESTED
-     *
-     *
      */
 
     @Autowired
@@ -27,6 +25,7 @@ public class ProductService {
     public void addTenProducts() {
         for (int i = 0; i < 10; i++) {
             productRepository.addProduct("Product " + i);
+            if (i == 5) throw new RuntimeException(":(");
         }
     }
 }
