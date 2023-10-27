@@ -21,7 +21,7 @@ public class ProjectConfig {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl("jdbc:mysql://localhost/demo");
         dataSource.setUsername("root");
-        dataSource.setUsername("password");
+        dataSource.setPassword("password");
         return dataSource;
     }
 

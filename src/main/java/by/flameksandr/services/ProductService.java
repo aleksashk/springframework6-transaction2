@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ProjectService {
+public class ProductService {
     /**
      * Transaction propagation
      * REQUIRED (default)
@@ -16,6 +16,8 @@ public class ProjectService {
      * NEVER
      * NOT_SUPPORTED
      * NESTED
+     *
+     *
      */
 
     @Autowired
